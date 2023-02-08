@@ -10,22 +10,55 @@ NADA    Selector natural
 */
 
 body{
-    padding: 0em;
-    margin: 0em;
+    padding: 0rem;
+    margin: 0rem;
 }
 
 .navigation-bar{
     background-color: aqua; 
-    padding: 1em;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.list{
+/****** ESTILOS DE LA LISTA DE POKEMONES ******/
+
+.pokemon-list{
     background-color: blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
 }
+
+.pokemon{
+    height: 16rem;
+    width: 10rem;
+    background: beige;
+    margin: 1rem;
+}
+
+.pokemon .photo{
+    background-color: green;
+    height: 8rem;
+    overflow: hidden;
+}
+
+.pokemon .photo img{
+    height: 100%;
+}
+
+.pokemon .info{
+    background: lightgray;
+    padding: 1rem;
+}
+
+/************/
 
 .footer{
     background-color: fuchsia;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
 }
 
 ul{
@@ -38,4 +71,6 @@ ul{
     color: white;
     background-color: yellowgreen;
 }
+
+
 
