@@ -12,35 +12,82 @@ NADA    Selector natural
 body{
     padding: 0rem;
     margin: 0rem;
+    font-family: sans-serif;
 }
 
+h1{ font-size: 6rem; }
+
+h2{ font-size: 4rem; }
+
+h3{ font-size: 3rem; }
+
+h4{ font-size: 2rem; }
+
+h5{ font-size: 1.5rem; }
+
+h6{ font-size: 1.25rem; }
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0rem;
+}
+
+/****** ESTILOS DE LA BARRA DE NAVEGACIÓN ******/
+
 .navigation-bar{
-    background-color: aqua; 
     padding: 1rem;
+    box-sizing: border-box;
+    /* Nos ayuda a prevenir que el padding aumente el tamaño de nuestro div */
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); 
+    /* Red Green Blue Alpha */
+    backdrop-filter: blur(32px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.searchbox{
+    border-radius: 0.25rem;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 15rem;
+    padding-left: 1rem;
+    background-image: url('search.png');
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
 }
 
 /****** ESTILOS DE LA LISTA DE POKEMONES ******/
 
 .pokemon-list{
-    background-color: blueviolet;
+    background-color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
+    padding-top: 6rem;
 }
 
 .pokemon{
-    height: 16rem;
-    width: 10rem;
-    background: beige;
+    height: 31.8rem;
+    width: 20.12rem;
+    background: #ECECF0;
     margin: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0rem 0.06rem 0.25rem rgba(0, 0, 0, 0.2);
+    /* box-shadow: posicion-x posicion-y blur color; */
+    transition: all 300ms ease;
+}
+
+.pokemon:hover{
+    box-shadow: 0rem 0.25rem 1.5rem rgba(0, 0, 0, 0.16);
 }
 
 .pokemon .photo{
     background-color: green;
-    height: 8rem;
+    height: 18.75rem;
     overflow: hidden;
 }
 
@@ -49,7 +96,43 @@ body{
 }
 
 .pokemon .info{
-    background: lightgray;
+    background: #FFFFFF;
+    padding: 1rem;
+}
+
+.pokemon .info p{
+    margin: 0.5rem 0rem;
+    /* el primer numer es la propiedad para los margenes top y bottom, mientras que la segunda es para left and right */
+}
+
+.pokemon .type-list{
+    height: 2rem;
+    padding-top: 1rem;
+}
+
+.type-list span{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 0.25rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.fire{
+    background-color: #FF7337;
+    color: #0C0C0C;
+}
+
+.water{
+    background-color: #0096C6;
+    color: #FFFFFF;
+}
+
+.electric{
+    background-color: #F1FF53;
+    color: #0C0C0C;
+}
+
+.status{
     padding: 1rem;
 }
 
