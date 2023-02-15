@@ -1,11 +1,33 @@
+:root{
+    --brand-30: #E3B6FF;
+    --brand-60: #D396FF;
+    --brand-90: #BE76FF;
+    --brand-100: #8F37FF;
+    --brand-200: #750DDD;
+    --brand-300: #6205AC;
+    --brand-400: #450070;
+
+    --neutral-solid-00: #FFFFFF;
+    --neutral-solid-100: #000000;
+
+    --neutral-alpha-light-10: rgba(255, 255, 255, 0.1);
+    --neutral-alpha-light-20: rgba(255, 255, 255, 0.2);
+
+    --neutral-alpha-light-50: rgba(255, 255, 255, 0.5);
+
+    --neutral-alpha-dark-10: rgba(0, 0, 0, 0.1);
+}
+
+
 /* 
 
 Selector nos ayuda a selececcionar un elmento de un archivo
 
-.       Selector de clase
-            Una clase es un grupo de elementos que comparten características
-#       Selector de Id 
-NADA    Selector natural 
+.               Selector de clase
+                    Una clase es un grupo de elementos que comparten características
+#               Selector de Id 
+NADA            Selector natural 
+selector:estado Selector de estado
 
 */
 
@@ -27,8 +49,13 @@ h5{ font-size: 1.5rem; }
 
 h6{ font-size: 1.25rem; }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, p, .caption, .small{
     margin: 0rem;
+}
+
+.feather {
+    width: 1rem;
+    height: 1rem;
 }
 
 /****** ESTILOS DE LA BARRA DE NAVEGACIÓN ******/
@@ -40,6 +67,7 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     justify-content: space-between;
     position: fixed;
+    z-index: 20;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8); 
     /* Red Green Blue Alpha */
@@ -86,23 +114,55 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .pokemon .photo{
-    background-color: green;
     height: 18.75rem;
     overflow: hidden;
 }
 
 .pokemon .photo img{
     height: 100%;
+    position: relative;
+    top: -4rem;
 }
 
 .pokemon .info{
     background: #FFFFFF;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .pokemon .info p{
-    margin: 0.5rem 0rem;
+    margin: 0rem;
+    margin-bottom: 0.5rem;
+    color: #8A8A9C;
     /* el primer numer es la propiedad para los margenes top y bottom, mientras que la segunda es para left and right */
+}
+
+.action-bar{
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.0));
+    position: relative;
+    z-index: 10;
+}
+
+.action-bar .action{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    background-color: var(--neutral-alpha-light-20);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms ease all;
+}
+
+.action-bar .action:hover{
+   background-color: var(--neutral-alpha-light-50); 
+}
+
+.pokemon .info h5{
+    margin-bottom: 0.5rem;
 }
 
 .pokemon .type-list{
@@ -112,7 +172,7 @@ h1, h2, h3, h4, h5, h6{
 
 .type-list span{
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     margin-right: 0.25rem;
     border: 2px solid rgba(0, 0, 0, 0.2);
 }
@@ -153,6 +213,11 @@ ul{
 #main-links{
     color: white;
     background-color: yellowgreen;
+}
+
+.test{
+    padding: 1rem;
+    background-color: var(--brand-30);
 }
 
 
