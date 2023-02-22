@@ -1,19 +1,72 @@
 <html>
     <head>
         <script src="action.js"></script> 
+
+        <link rel="stylesheet" href="estilosEjemplos.css">
     </head>
     <body>
-        <h1>Suma</h1>
+        <h1>Calculadora</h1>
         <input type="text" id="numeroA">
         <input type="text" id="numeroB">
-        <button onclick="sumaAvanzada()">RUN</button>
+        <button onclick="sumaAvanzada()">SUMAR</button>
+        <button onclick="restaAvanzada()">RESTAR</button>
+        <button onclick="multiplicacionAvanzada()">MULTIPLICACION</button>
+        <button onclick="divisionAvanzada()">DIVISION</button>
+
+        <div id="resultCalculadora" class="calculatorDisplay"></div>
 
         <h1>Verifica tu entrada al bar</h1>
         <input type="text" id="nombre" placeholder="Escribe tu nombre">
         <input type="text" id="anho" placeholder="Escribe tu año de nacimiento">
+        <select name="mes" id="mes">
+            <option value="1">enero</option>
+            <option value="2">febrero</option>
+            <option value="3">marzo</option>
+            <option value="4">abril</option>
+            <option value="5">mayo</option>
+            <option value="6">junio</option>
+            <option value="7">julio</option>
+            <option value="8">agosto</option>
+            <option value="9">septiembre</option>
+            <option value="10">octubre</option>
+            <option value="11">noviembre</option>
+            <option value="12">diciembre</option>
+        </select>        
         <button onclick="barAvanzado()">RUN</button>
+        <div id="resultBar"></div>
         
-        <h1>FUNCION DE FOR</h1>
-        
+        <h1>Contador</h1>
+        <input type="text" id="limite" placeholder="Hasta que número quieres contar">
+        <button onclick="contar()">RUN</button>
+
+        <h2>Entrada al cine</h2>
+        <select name="entradas" id="entradas">
+            <option value="1">1 entrada</option>
+            <option value="2">2 entradas</option>
+            <option value="3">3 entradas</option>
+            <option value="4">4 entradas</option>
+            <option value="5">5 entrada</option>
+        </select>
+        <select name="palomitas" id="palomitas">
+            <option value="0">Sin palomitas</option>
+            <option value="1">1 palomitas</option>
+            <option value="2">2 palomitas</option>
+            <option value="3">3 palomitas</option>
+            <option value="4">4 palomitas</option>
+            <option value="5">5 palomitas</option>
+        </select>
+        <select name="refrescos" id="refrescos">
+            <option value="0">Sin refresco</option>
+            <option value="1">1 refresco</option>
+            <option value="2">2 refrescos</option>
+            <option value="3">3 refrescos</option>
+            <option value="4">4 refrescos</option>
+            <option value="5">5 refrescos</option>
+        </select>
+
+        <button onclick="cine()">REALIZAR COMPRA</button>
+
+        <div id="resultCine"></div>
+        <div id="promos"></div>
     </body>
 </html>

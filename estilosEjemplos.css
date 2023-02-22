@@ -1,0 +1,18 @@
+.calculatorDisplay{
+    font-family: monospace;
+    font-size: 2rem;
+    background-color: olive;
+    padding: 0.5rem;
+}
+
+#resultBar{
+    background: lightblue;
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+.advertencia {
+    background: yellow;
+    font-weight: bold;
+    font-size: 2rem;
+}

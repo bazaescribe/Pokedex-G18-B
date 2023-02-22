@@ -100,6 +100,59 @@ function sumaAvanzada(){
     var result = aFinal + bFinal;
 
     console.log(result);
+
+    document.getElementById("resultCalculadora").innerHTML = result;
+}
+
+function restaAvanzada(){
+    var a = 0;
+    var b = 0;
+
+    a = document.getElementById("numeroA").value;
+    b = document.getElementById("numeroB").value;
+
+    var aFinal = parseInt(a);
+    var bFinal = parseInt(b);
+
+    var result = aFinal - bFinal;
+
+    console.log(result);
+
+    document.getElementById("resultCalculadora").innerHTML = result;
+}
+
+function multiplicacionAvanzada(){
+    var a = 0;
+    var b = 0;
+
+    a = document.getElementById("numeroA").value;
+    b = document.getElementById("numeroB").value;
+
+    var aFinal = parseInt(a);
+    var bFinal = parseInt(b);
+
+    var result = aFinal * bFinal;
+
+    console.log(result);
+
+    document.getElementById("resultCalculadora").innerHTML = result;
+}
+
+function divisionAvanzada(){
+    var a = 0;
+    var b = 0;
+
+    a = document.getElementById("numeroA").value;
+    b = document.getElementById("numeroB").value;
+
+    var aFinal = parseInt(a);
+    var bFinal = parseInt(b);
+
+    var result = aFinal / bFinal;
+
+    console.log(result);
+
+    document.getElementById("resultCalculadora").innerHTML = result;
 }
 
 // No solo quiero sumar, quiero suimar, restar, mult, y dividir.
@@ -107,26 +160,85 @@ function sumaAvanzada(){
 function barAvanzado(){
     var name = "";
     var year = 0;
+    var mensaje = "";
 
+    // Info del usuario
     name = document.getElementById("nombre").value;
     year = document.getElementById("anho").value;
+    yearNacimiento = parseInt(year);
 
-    yearFinal = parseInt(year);
+    var e = document.getElementById("mes");
+    var mesNacimiento = e.value;
 
-    console.log(name + year);
+    console.log("Información que puso el usuario: " + name + year + mesNacimiento);
 
-    var userAge = 2023-yearFinal;
-    console.log(userAge)
+    // Fecha del día de hoy
+    var fechaDeHoy = new Date();
+    var mesActual = fechaDeHoy.getMonth() + 1;
 
+    console.log("Mes actual: " + mesActual);
+
+    // Calcular edad
+    var userAge = 2023-yearNacimiento;
+
+    if(mesNacimiento >= mesActual){
+        userAge = userAge-1;
+    }
+
+    console.log("Edad del usuario: " + userAge);
+
+    // Tomamos la decision
     if(userAge >= 18){
-        console.log("Bienvenido XXXXX, puedes entrar al bar");
+        mensaje = "Te damos la bienvenida " + name + " tienes " + userAge + " años, puedes pasar al bar. ✅";
+        document.getElementById("resultBar").innerHTML = mensaje;
     } else {
-        console.log("Lo siento XXXXX, no puedes entrar al bar");
+        mensaje = "Lo siento " + name + ", solo tienes " + userAge + " así que no puedes entrar. ❌";
+        document.getElementById("resultBar").innerHTML = mensaje;
     }
 }
 
-// Evaluar no solo por año sino tambien por dia y mes de nacimiento.
-// Mensaje sea personalizado
-
 
 // Crear una app que saque provecho del FOR
+
+function contar() { 
+    var limiteParaContar = document.getElementById("limite").value;
+
+    for(var i=0; i<=limiteParaContar; i++){
+        console.log(i);
+    }
+}
+
+function cine() {
+    var entradas = document.getElementById("entradas").value; //3
+    var palomitas = document.getElementById("palomitas").value;
+    var refrescos = document.getElementById("refrescos").value;
+
+    var entradasEntregadas = "";
+    var palomitasEntregadas = "";
+    var refrescosEntregados = "";
+
+    console.log("Entradas: " + entradas);
+    console.log("palomitas: " + palomitas);
+    console.log("refrescos: " + refrescos);
+
+    for(var i=0; i < entradas; i++){
+        entradasEntregadas = entradasEntregadas + "🎫";
+    }
+
+    for(var j=0; j < palomitas; j++){
+        palomitasEntregadas = palomitasEntregadas + "🍿";
+    }
+
+    for(var k=0; k < refrescos; k++){
+        refrescosEntregados = refrescosEntregados + "🥤";
+    }
+
+    document.getElementById("resultCine").innerHTML = entradasEntregadas + palomitasEntregadas + refrescosEntregados;
+
+    if(entradas >= 3){
+        document.getElementById("promos").innerHTML = "Completa tu compra pronto, hay pocos lugares";
+        document.getElementById("promos").classList.add("advertencia");
+    } else { 
+        document.getElementById("promos").innerHTML = "";
+    }
+}
