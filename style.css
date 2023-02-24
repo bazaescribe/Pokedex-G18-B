@@ -121,7 +121,6 @@ h1, h2, h3, h4, h5, h6, p, .caption, .small{
 .pokemon .photo img{
     height: 100%;
     position: relative;
-    top: -4rem;
 }
 
 .pokemon .info{
@@ -161,14 +160,33 @@ h1, h2, h3, h4, h5, h6, p, .caption, .small{
    background-color: var(--neutral-alpha-light-50); 
 }
 
-.pokemon .info h5{
-    margin-bottom: 0.5rem;
+.pokemon .info .number{
+    font-size: 0.75rem;
+    color: gray;
+    font-weight: lighter;
+}
+
+.pokemon .info .name{
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
 }
 
 .pokemon .type-list{
     height: 2rem;
     padding-top: 1rem;
+    display: flex;
 }
+
+.pokemon .type-list .type{
+    padding: 0.5rem;
+    background: gray;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+}
+
 
 .type-list span{
     padding: 0.5rem;
@@ -190,6 +208,31 @@ h1, h2, h3, h4, h5, h6, p, .caption, .small{
 .electric{
     background-color: #F1FF53;
     color: #0C0C0C;
+}
+
+.poison{
+    background-color: #9c32ff;
+    color: white;
+}
+
+.bug{
+    background-color: #358c6b;
+    color: white;
+}
+
+.flying{
+    background-color: #a4e0f6;
+    color: black;
+}
+
+.ground{
+    background-color: #4b2807;
+    color: white;
+}
+
+.normal{
+    background-color: #b0b0b0;
+    color: white;
 }
 
 .status{

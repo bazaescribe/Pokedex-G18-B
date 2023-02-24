@@ -1,0 +1,79 @@
+#frutero{
+    background-color: silver;
+    padding: 1rem;
+    display: flex;
+}
+
+#frutero div{
+    background-color: aquamarine;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+#card{
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 16rem;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease all;
+}
+
+#card:hover{
+    box-shadow: 4px 4px 32px rgba(0, 0, 0, 0.16);
+}
+
+#librero{
+    background: beige;
+    display: flex;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.book{
+    width: 10rem;
+    height: 16rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease all;
+}
+
+.book:hover{
+    box-shadow: 4px 4px 32px rgba(0, 0, 0, 0.2);
+}
+
+.book .title{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.book .author{
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.book .pages{
+    font-weight: 0.75rem;
+    font-weight: lighter;
+}
+
+.fantasy{
+    background-image: linear-gradient(#ce00b9, purple);
+    color: white;
+}
+
+.horror{
+    background-image: linear-gradient(#fd0000, rgb(99, 2, 2));
+    color: white;
+}
+
+.scify{
+    background-image: linear-gradient(#01adf2, rgb(0, 249, 50));
+    color: black;
+}
+
+.adventure{
+    background-image: linear-gradient(#deaa00, rgb(99, 73, 2));
+    color: white;
+}
