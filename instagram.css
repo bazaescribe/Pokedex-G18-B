@@ -1,0 +1,43 @@
+.sidebar{
+    background: orange;
+    width: 20rem;
+    height: 50rem;
+}
+
+.content{
+    background: green;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.posts{
+    background: purple;
+    width: 30rem;
+}
+
+.post{
+    background: white;
+    box-shadow: 0px 0px 16px grey;
+    padding: 1rem;
+    margin: 1rem;
+    height: 40rem;
+}
+
+.suggestion{
+    background: grey;
+    box-shadow: 0px 0px 16px grey;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.suggestions{
+    background: pink;
+    width: 20rem;
+}
+
+
+body{
+    margin: 0px;
+    display: flex;
+}
